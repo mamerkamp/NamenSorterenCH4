@@ -23,6 +23,10 @@ public class NamenBestandVerwerker {
     }
 
 
+    public static void voegNaamToeAanGesorteerdeLijst (String naam, ArrayList<String> lijst) {
+
+    }
+
     public static ArrayList<String> leesNamenBestand(String bestandsnaam) {
         File inputbestand = new File(bestandsnaam);
         Scanner invoer = null;
