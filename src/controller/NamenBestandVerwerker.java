@@ -15,16 +15,21 @@ public class NamenBestandVerwerker {
 
 
         String bestandsnaam = "resources/9.2 GesorteerdeNamenOrigineel.txt";
-//        System.out.println(telNamenBestand(bestandsnaam));
-
         ArrayList<String> namenLijst = leesNamenBestand(bestandsnaam);
-        System.out.println(namenLijst);
-
+        voegNaamToeAanGesorteerdeLijst("Elzelyne", namenLijst);
     }
 
 
     public static void voegNaamToeAanGesorteerdeLijst (String naam, ArrayList<String> lijst) {
-
+        int index = 0;
+        while (naam.compareTo(lijst.get(index)) > 0) {
+            index++;
+            if (index >= lijst.size()) {
+                lijst.add(naam);
+                return;
+            }
+        }
+        lijst.add(index, naam);
     }
 
     public static ArrayList<String> leesNamenBestand(String bestandsnaam) {
